@@ -1,55 +1,51 @@
-✨ Key Features
-Project Dashboard: Automatically calculates and displays a visual progress bar for each project based on completed tasks.
+# 📋 Project Management Tool
 
-Kanban Board View: Organizes tasks into customizable stages (e.g., To Do, In Progress, Done).
+A full-stack Django web application for efficient project and task management with real-time collaboration features.
 
-Priority Color-Coding: Tasks are dynamically styled with color-coded borders (Red for High, Yellow for Medium, Green for Low) using database-driven logic.
+## 📑 Table of Contents
+- [Features](#-features)
+- [Technical Stack](#-technical-stack)
+- [Installation & Setup](#-installation--setup)
+- [Project Structure](#-project-structure)
+- [Usage](#-usage)
+- [Contributing](#-contributing)
 
-Full CRUD Lifecycle: Users can Create, Read, Update (Edit), and Delete projects and tasks with safety confirmation screens.
+---
 
-Collaboration System: Integrated comment threads within each task to allow for team communication and tracking.
+## ✨ Features
 
-🛠️ Technical Stack
-Backend: Python 3.x, Django 5.x (MTV Architecture)
+### Core Functionality
+- **Project Dashboard** - Visual progress tracking with automated progress bars for each project
+- **Kanban Board View** - Customizable workflow stages (To Do, In Progress, Done)
+- **Priority Color-Coding** - Color-coded task borders based on priority levels
+  - 🔴 Red: High Priority
+  - 🟡 Yellow: Medium Priority
+  - 🟢 Green: Low Priority
+- **Full CRUD Operations** - Create, Read, Update, and Delete projects and tasks with confirmation dialogs
+- **Collaboration System** - Integrated comment threads for team communication and task tracking
 
-Frontend: HTML5, CSS3, Bootstrap 5 (Responsive Design)
+---
 
-Database: SQLite3 (Relational database management)
+## 🛠️ Technical Stack
 
-Authentication: Django Contrib Auth (Session-based security)
+| Component | Technology |
+|-----------|-----------|
+| **Backend** | Python 3.x, Django 5.x (MTV Architecture) |
+| **Frontend** | HTML5, CSS3, Bootstrap 5 (Responsive Design) |
+| **Database** | SQLite3 (Relational Database) |
+| **Authentication** | Django Contrib Auth (Session-based) |
 
-🏗️ Installation & Setup
-Clone the Repository:
+---
 
-Bash
+## ����️ Installation & Setup
+
+### 1. Clone the Repository
+```bash
 git clone https://github.com/S4544/project-management-tool.git
 cd project-management-tool
-Create a Virtual Environment (Optional but recommended):
-
-Bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install Dependencies:
-
-Bash
-pip install django
-Database Setup:
-
-Bash
-python manage.py makemigrations
-python manage.py migrate
-Create Admin User (to manage projects):
-
-Bash
-python manage.py createsuperuser
-Run the Server:
-
-Bash
-python manage.py runserver
-📂 Project Structure
-/core: Main project settings and configurations.
-
-/tasks: The primary application folder containing models, views, and forms.
-
-/templates: Custom HTML templates built with Bootstrap 5 components.
-
+## 🏗️ Installation
+1. Clone the repo: `git clone  https://github.com/S4544/project-management-tool.git
+cd project-management-tool
+2. Install Django: `pip install django`
+3. Run migrations: `python manage.py migrate`
+4. Start server: `python manage.py runserver`
