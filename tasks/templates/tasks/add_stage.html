@@ -1,0 +1,20 @@
+{% extends 'tasks/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                Add New Stage to <strong>{{ project.name }}</strong>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-dark w-100">Add Stage</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

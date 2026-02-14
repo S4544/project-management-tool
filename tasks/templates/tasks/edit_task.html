@@ -1,0 +1,36 @@
+{% extends 'tasks/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-warning text-dark">
+                <h4 class="mb-0">Edit Task: {{ task.title }}</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    {% csrf_token %}
+                    
+                    {{ form.as_p }}
+                    
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Move to Stage:</label>
+                        <select name="stage" class="form-control">
+                            {% for stage in task.stage.project.stages.all %}
+                            <option value="{{ stage.id }}" {% if stage.id == task.stage.id %}selected{% endif %}>
+                                {{ stage.name }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success">Save Changes</button>
+                        <a href="{% url 'task_detail' task.id %}" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
